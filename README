@@ -1,0 +1,5 @@
+It seems that if mult2.py does not have write permissions then it won't run correctly if
+you pass it --ignore-blank or --ignore-non-numerical. This is because it tries to create 
+dummy files of those names to avoid Python's fileinput mode giving an error, as it reads 
+from every string passed as a command line argument. Allowing the script to write in its 
+working directory ensures its proper functioning.
